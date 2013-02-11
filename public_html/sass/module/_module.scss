@@ -1,0 +1,13 @@
+// Grupo Módulo: definicoes de aparencia especificas de regiões específicas. Ex. definicoes de extensoes
+
+.artigo {
+  float: left;
+  padding: .75em;
+  width: 50%;
+}
+.artigo-destaque {
+  width: 100%;
+/*  > * {
+   padding: .75em; 
+  }*/
+}

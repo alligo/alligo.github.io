@@ -1,0 +1,33 @@
+.sprite {
+    background: url(alligo.png) no-repeat;
+}
+
+.sprite-alligo-png {
+    width: 200px;
+    height: 101px;
+    background-position: -0px -0px;
+}
+
+.sprite-icon-mail-hover-png {
+    width: 43px;
+    height: 43px;
+    background-position: -162px -112px;
+}
+
+.sprite-icon-mail-png {
+    width: 43px;
+    height: 43px;
+    background-position: -108px -112px;
+}
+
+.sprite-icon-twitter-hover-png {
+    width: 43px;
+    height: 43px;
+    background-position: -54px -112px;
+}
+
+.sprite-icon-twitter-png {
+    width: 43px;
+    height: 43px;
+    background-position: -0px -112px;
+}

@@ -1,0 +1,39 @@
+// Grupo Layout: definicoes gerais a página, mas não específico. Ex.: grid, aparencia geral de blocos
+
+// Clear fix nos seguintes elementso
+.agrupado:after, .ultimo:after, .contem:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contem {
+  //@include container;
+  //@include susy-grid-background;
+  width: 75em; //1200px
+  margin: 0 auto;
+}
+
+[role="main"], .complemento {
+  float: left;
+/*  height: inherit;*/
+}
+
+//[role="main"] é o conteúdo principal. @see WAI ARIA
+[role="main"] {
+  width: 100%;
+}
+
+//Padrao é colula com tres
+.complemento.primario, .complemento.secundario {
+  width: 20%;
+}
+.tresgrupos [role="main"] {
+  width: 60%;
+}
+.doisgrupos [role="main"] {
+  width: 75%;
+}
+.doisgrupos .complemento.primario, .doisgrupos .complemento.secundario {
+  width: 25%;
+}

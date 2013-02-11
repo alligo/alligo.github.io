@@ -1,0 +1,21 @@
+/* Menu */
+// Menu, por padrão, define apenas o extremamente básico, a exemplo de underline
+.menu {
+  a, a:hover, a:active, a:visited {
+    @if ($padrao-link-underline-usar) {
+      text-decoration: none;
+    }
+  }
+}
+
+.menu-horizontal {
+  @extend .menu;
+  li {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+.menu-vertical {
+  @extend .menu;
+}

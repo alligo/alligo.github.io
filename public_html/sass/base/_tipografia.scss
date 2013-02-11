@@ -1,0 +1,53 @@
+// ---------------------------------------------------------------------------
+// Tipografia básica
+// Ajuda a trabalhar harmonicamente com tamanho de letras e linha
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+// @see http://24ways.org/2006/compose-to-a-vertical-rhythm
+/* Tipografia básica */
+
+// ---------------------------------------------------------------------------
+// Vertical Rhythm
+@import "compass/typography/vertical_rhythm";
+
+$relative-font-sizing : false;
+$base-font-size       : 16px;
+$base-line-height     : 24px;
+
+// Injeta no código a base
+@include establish-baseline;
+
+// ---------------------------------------------------------------------------
+// Definição de demais funções de fonte
+
+// Titulos
+h1 {
+  @include adjust-font-size-to($base-font-size * 2);
+}
+h2 {
+  @include adjust-font-size-to($base-font-size * 1.5);
+}
+h3 {
+  @include adjust-font-size-to($base-font-size * 1.3);
+}
+h4, h5, h6 {
+  @include adjust-font-size-to($base-font-size * 1.1);
+}
+
+// Links
+a {
+  color: $padrao-cor-link;
+  @if ($padrao-link-underline-usar) {
+    text-decoration: underline;
+  } @else {
+    text-decoration: none;
+  }
+
+  &:hover, &:active {
+    color: adjust-lightness($padrao-cor-link, -50%);
+  }
+}
+
+//Variações de texto
+strong {
+  font-weight: 700;
+}

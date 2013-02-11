@@ -1,0 +1,88 @@
+// Grupo Mudança de Estado: alteração de estado. Ex.: media queries(responsible), definicoes focadas para alteracao por javascript;
+
+// Tabela de equivalencia 1em = 16px
+//em  1   | 2   | 3   | 4   | 5   | 6   | 7    | 8    | 9    | 10   | 11   | 12   |
+//px  16  | 32  | 48  | 64  | 80  | 96  | 112  | 128  | 144  | 160  | 176  | 192  | 
+//em  20  | 30  | 40  | 48  | 50  | 60  | 61   | 70   | 80   | 90   | 100  | 120
+//px  320 | 480 | 640 | 768 | 800 | 960 | 976  | 1120 | 1280 | 1440 | 1600 | 1920
+
+//Twiter boostrap <(100%) | 48(768) | 61.25(780 | 80 (1200)+
+
+//Iphone 1,2,3: 320 x 480, iPhone 4 : 640 x 960
+// iPad 1,2,3: 768 x 1024
+
+// Smartphone                  240px*, 320px, 480px
+// Tablet, small monitor       768px, 1024px
+// Monitor                     1280px, 1600px, 1980px
+
+// ---------------------------------------------------------------------------
+// RESOLUCOES
+// Os queries abaixo quebram parte a parte cada tela
+
+
+// MINUSCULO: Menor que 480px
+// Mobiles paisagem/retrato
+// Ex.: iPhone 1,2,3 retrato; 
+//@media screen and (max-width: 479px) {
+@media only screen and (max-width: 29.9em) {
+  .contem {
+    width: 100%;
+  } 
+}
+
+// PEQUENO: Igual ou maior que 480px e menor que 768px
+// Mobile retrato & paisagem, Tablet retrado
+// Ex.: iPhone 4 retrato; Motorola Milestone 1, 2 retrato & paisagem
+/*@media screen and (min-width: 480px) and (max-width: 767px) {*/
+@media only screen and (min-width: 30em) and (max-width: 47.9em) {
+  .contem {
+    width: 30em; //768
+  }
+}
+
+// MEDIO: Igual ou maior que 768px e menor que 960px
+// Ex.:Tablet retrato (768), iPhone paisagem (960)
+//@media screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 48em) and (max-width: 59.9em) {
+  .contem {
+    width: 48em; //768
+  }
+}
+
+// GRANDE: Igual ou maior que 960 e menor que 1200
+// Ex. Tablet paisagem (1024), 
+//Tablet retrato: de 768px até menor que 960px
+//@media screen and (min-width: 960px) and (max-width: 1199px) {
+@media only screen and (min-width: 60em) and (max-width: 74.9em) {
+  .contem {
+    width: 60em; //960
+  }
+}
+
+//PADRÂO
+//A resolu
+
+//ENORME: igual ou maior que 1440 
+//@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 90em) {
+  .contem {
+    width: 90em; //1440
+  }
+}
+
+// ---------------------------------------------------------------------------
+// COMBOS
+// Os queries abaixo englobam mais de um conjunto
+
+//MINUSCULO, PEQUENO e MEDIO
+//@media screen and (max-width: 959px) {
+@media only screen and (max-width: 59.9em) {
+  [role="main"], .complemento {
+    width: 100% !important;//Sim, esse important é necessario
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
