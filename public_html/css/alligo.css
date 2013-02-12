@@ -1,8 +1,11 @@
 @charset "UTF-8";
-/* -------------------------------------------------------------------------*/
-/* Base */
+/*
+   Alligo © 2013
+   CSS manual usando teoria SMACSS, com pré-processador SASS
+*/
+/* Base
+----------------------------------------------------------------------------*/
 /* CSS Reset */
-/* line 17, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,229 +24,219 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   font-size: 100%;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
-/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
-  line-height: 1;
-}
+  line-height: 1; }
 
-/* line 24, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
-/* line 26, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-/* line 28, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
-/* line 30, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
-  quotes: none;
-}
-/* line 103, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
 
-/* line 32, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
-  border: none;
-}
+  border: none; }
 
-/* line 116, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
+  display: block; }
 
-/* Tipografia b├ísica */
-/* line 61, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* Tipografia básica */
 * html {
-  font-size: 100%;
-}
+  font-size: 100%; }
 
-/* line 64, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 16px;
-  line-height: 1.5em;
-}
+  line-height: 1.5em; }
 
-/* line 23, ../sass/base/_tipografia.scss */
-h1 {
-  font-size: 2em;
-  line-height: 3em;
-}
+.typo-base, body, footer h2 {
+  Font-family: Constantia, Georgia, "Times New Roman", Times, serif;
+  font-style: italic; }
 
-/* line 26, ../sass/base/_tipografia.scss */
-h2 {
-  font-size: 1.5em;
-  line-height: 3em;
-}
+.typo-alt, h1, h2, h3 {
+  Font-family: "Myriad Pro", "Myriad", "Myriad Web Pro", "Lucida Grande", "Droid Sans", sans-serif;
+  font-style: italic; }
 
-/* line 29, ../sass/base/_tipografia.scss */
-h3 {
-  font-size: 1.3em;
-  line-height: 3em;
-}
+.typo-mono {
+  Font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
 
-/* line 32, ../sass/base/_tipografia.scss */
-h4, h5, h6 {
-  font-size: 1.1em;
-  line-height: 1.5em;
-}
-
-/* line 37, ../sass/base/_tipografia.scss */
 a {
-  color: #005588;
-  text-decoration: underline;
-}
-/* line 45, ../sass/base/_tipografia.scss */
-a:hover, a:active {
-  color: black;
-}
+  color: #ffcc33;
+  text-decoration: underline; }
+  a:hover, a:active {
+    color: #332600; }
 
-/* line 51, ../sass/base/_tipografia.scss */
 strong {
-  font-weight: 700;
-}
+  font-weight: 700; }
 
-/* -------------------------------------------------------------------------*/
-/* Layout */
-/* line 4, ../sass/layout/_layout.scss */
+h1, h2 {
+  color: #333333; }
+
+h3 {
+  color: #333333; }
+
+[role="main"] > h1 {
+  margin: 1.5em auto; }
+
+footer h2 {
+  font-size: 1.7dem;
+  font-weight: 700; }
+
+footer a, footer a:hover, footer a:link {
+  color: #ccc; }
+footer a:hover {
+  text-decoration: none; }
+
+/*  Layout
+----------------------------------------------------------------------------*/
 .agrupado:after, .ultimo:after, .contem:after {
   content: "";
   display: table;
-  clear: both;
-}
+  clear: both; }
 
-/* line 10, ../sass/layout/_layout.scss */
 .contem {
-  width: 75em;
-  margin: 0 auto;
-}
+  width: 45em;
+  margin: 0 auto; }
 
-/* line 17, ../sass/layout/_layout.scss */
-[role="main"], .complemento {
-  float: left;
-  /*  height: inherit;*/
-}
+body {
+  background: white url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8vLy+fn59PT09vb29/f39fX18/Pz+Pj4+6R61QAAAVBJREFUeNrslDsOXDEMAylRn/vfOONNlU518IoFHmYNmaJoybvd4ZlaV5dVuTt9xprtnVJXazt3VI6MOWNRNO2anAxncAvls85YIUSgr91I2lo+J+9YHnuypxdhzrGiM+uMMWeq09rXIUKfTe46Y9V0UG7pa/33ZFD9jFE2UenK35hqOWM0nrEKc0YrO7Ofz0FvmjPWhBloeugvU8VoBmVnLIr0/n4kjAMvZFFzxnJFFbpyFpdFQgyOM0YB8UwMIWRDzTTlt85YLfwovOALo2uJ18vZFYuSSTq8VjKql1Cl94z17AxiwaB3/3X5hBUbS2Ui/qKJNSJseHXFBAkz6pcvWqon0zh2xqSK10VvVagkoITevNgzFp1AteaOfv+Rdl7LGfOc8+V0SywormDeSPUZ61uq31L9luq3VL+l+i3Vb6l+S/Vbqt9S/T+X6h8BBgCsg0KyWmfDBAAAAABJRU5ErkJggg==") repeat top left;
+  border-top: 10px solid #ffcc33;
+  color: #666; }
 
-/* line 23, ../sass/layout/_layout.scss */
-[role="main"] {
-  width: 100%;
-}
+header > h1 {
+  padding-top: 4em;
+  padding-bottom: 4em; }
+header > h2 {
+  font-size: 2.8em;
+  line-height: 1.0em; }
+header > p {
+  font-size: 1.375em;
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
-/* line 28, ../sass/layout/_layout.scss */
-.complemento.primario, .complemento.secundario {
-  width: 20%;
-}
+.conteudo {
+  border-bottom: #FCB325 solid .7em;
+  padding-bottom: 2em; }
 
-/* line 31, ../sass/layout/_layout.scss */
-.tresgrupos [role="main"] {
-  width: 60%;
-}
+article h2 {
+  font-size: 2.5em;
+  line-height: 1.0em; }
+article p {
+  font-size: 1.125em;
+  padding-top: 1em;
+  padding-bottom: 1em; }
 
-/* line 34, ../sass/layout/_layout.scss */
-.doisgrupos [role="main"] {
-  width: 75%;
-}
+footer {
+  background-color: #404042;
+  color: #ccc;
+  font-style: italic;
+  padding-bottom: 2em;
+  margin-top: 2em; }
+  footer h2 {
+    color: #FCB325;
+    margin-left: 1.5em;
+    font-size: 1.375em;
+    line-height: 3em; }
+  footer p {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: center; }
 
-/* line 37, ../sass/layout/_layout.scss */
-.doisgrupos .complemento.primario, .doisgrupos .complemento.secundario {
-  width: 25%;
-}
+.span4, .empresa p {
+  display: block;
+  width: 33%;
+  float: left; }
 
-/* -------------------------------------------------------------------------*/
-/* Módulos */
-/* Menu */
-/* line 4, ../sass/module/menu/_menu.scss */
-.menu a, .menu-horizontal a, .menu-vertical a, .menu a:hover, .menu-horizontal a:hover, .menu-vertical a:hover, .menu a:active, .menu-horizontal a:active, .menu-vertical a:active, .menu a:visited, .menu-horizontal a:visited, .menu-vertical a:visited {
-  text-decoration: none;
-}
-
-/* line 13, ../sass/module/menu/_menu.scss */
-.menu-horizontal li {
-  float: left;
-  margin-right: 1em;
-}
-
-/* line 3, ../sass/module/_module.scss */
-.artigo {
-  float: left;
-  padding: .75em;
+.span2, [itemprop="founder"], [itemprop="employee"] {
+  display: block;
   width: 50%;
-}
+  float: left; }
 
-/* line 8, ../sass/module/_module.scss */
-.artigo-destaque {
-  width: 100%;
-  /*  > * {
-     padding: .75em; 
-    }*/
-}
+[itemprop="founder"] p, [itemprop="employee"] p {
+  margin-left: 2em;
+  text-align: left; }
 
-/* -------------------------------------------------------------------------*/
-/* Estado */
-/* -------------------------------------------------------------------------*/
-/* Tema */
-/* line 3, ../sass/theme/_theme.scss */
-.complemento {
-  background-color: #f2f2f2;
-}
+hr {
+  width: 70%;
+  height: 3px;
+  border: 0;
+  background-color: #ffcc33;
+  margin: 3.125em auto; }
 
-/* -------------------------------------------------------------------------*/
-/* Mudança de Estado */
+/* Módulos
+----------------------------------------------------------------------------*/
+.icon-home, .icon-mail, .icon-twitter {
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  margin-right: .5em; }
+
+.icon-home {
+  background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWZJREFUeNpi/P//P8OAAKDFQiBMTQPlgPg2FCuiySUD8UwgDiTFQGMgfg7E34D4D5RthiS/9D8EtCPrY8JjoAeQOgDlpgBxHBDzg8SgciR7OQGIfwLxJSCOBeK3UO+HQ10LcnUaEKtAxdsJGVgN9RLIRTlQw2EAZGAU1CCwt4GYH6fLgRLM0EAHgflA3IvEPgnEG4F4OzR806BiMHk2bAZyAvEWqKJGIF6N5DqQSyqA2AaIvaFiIO+XQi0Cgb1AzINsoATU1p9QhSf/o4LzQPwEiG8geRsGpiH5DhT+0jBDb0MjAhR+D/9jAmwuRQYbob77D9WvywhKi0CznwLxdiA2wBLcF4BYFIi/ADEzEKtgUdMExMuAGBQEX1gYGRnPwiIKR4IwICIVsgHNuUkw8VMCWIhQ8xqIHyG5mpmQBmJcqgr0mgkIQ7MrA8WGAg37iOZqBmq4lGQwMIbiSWq4g4wWdRRAgAEAgX3bYd+nErsAAAAASUVORK5CYII=") no-repeat; }
+
+.icon-mail {
+  background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAQCAYAAAD52jQlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASdJREFUeNpiZACC////ewMpPwbKwR0gXgAyMOE/dcFJJqDJxlBbvgDxeiD+S4YLL0AxCKiDDGWGcrYyMjIGAekIEg3eCsTmQFwMFwE6dxrU2T+BOAQqFgLEf4jw6hYgZgNiUSA+DxX7gGwozOBAIg2GGSiEZCBWQ2EG+xEwGJeBOA2FGeyNw+CNSAaewaL3AxOOwP8OxO9ADGDkrUGKvE1AHAoU+wVV8xqrbiwu/QDEllC5IiQXKwIxMxDzA/EcqEs5gXg7Ie8jG1iKFBThUDFpUOKGip/BYTCKoSADzaCaK7CFFRYxZIN3YTN0HR4D8QGYwa4wQ1mQck8gUOAqkNYiMYuCsvkNZAFQ7O9A4muRWTqJQjEIHGGEehkUObpUKPrAhRJAgAEAiTfEsDluHb8AAAAASUVORK5CYII=") no-repeat;
+  width: 21px;
+  height: 16px; }
+
+.icon-twitter {
+  background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAVCAYAAABYHP4bAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWVJREFUeNpi/P//P8OQAUDHqtPagjogPg/EH4B4OxDzk6KZk0h1Ff8R4CcQ5wMxD7GWMAPxNyDeAsSBeNQZQA1HByCfeRNr2RwkjXuBWAuLmnX/cQOQA+yJCjpoeCNr7IIFC5BWBOI///GD20DMRsiiFhyanwBxOB55dBCObC4jFossgdRhIGbG4Za/eOSQwSkgngvEEkD8Apev/NCCj1wAShw5IDNZcLgG5GIbKmQ1UL6aDIpfXBY9AuLXQMxDgSX7gHgiEF9mZGS8TyhPGQPxATKDzQzZPCZcFgFdAYt0MzJ8swyo/xSGy/H4SgiINwLxZxJ8AlIrjW4WyEd10CSNzVfvgNRBEuOqGKjvKYZZQEtEgfQZIL4DxGtAkQcNMmMgDicx6GqAlrTii3g5ID5JYZ5pIaXkzoGWU6RmykxyKzQnIF4NLd9wgWNAXA1KMMSYyUiEpaA4lEMSeg2Mh0ekOh4gwABnqMGtz5laywAAAABJRU5ErkJggg==") no-repeat;
+  width: 26px; }
+
+/* Estado
+----------------------------------------------------------------------------*/
+.centrado {
+  text-align: center; }
+
+.ocultado {
+  display: none; }
+
+/* Tema 
+---------------------------------------------------------------------------*/
+/* Mudança de Estado 
+---------------------------------------------------------------------------*/
 @media only screen and (max-width: 29.9em) {
-  /* line 28, ../sass/state-change/_state-change.scss */
   .contem {
-    width: 100%;
-  }
-}
+    width: 100%; } }
+@media only screen and (max-width: 37.5em) {
+  [itemprop="founder"], [itemprop="employee"], .span4, .empresa p, .empresa p {
+    width: 100%; }
+
+  [itemprop="founder"] > p, [itemprop="employee"] > p {
+    text-align: center; } }
 /*@media screen and (min-width: 480px) and (max-width: 767px) {*/
 @media only screen and (min-width: 30em) and (max-width: 47.9em) {
-  /* line 38, ../sass/state-change/_state-change.scss */
   .contem {
-    width: 30em;
-  }
-}
-@media only screen and (min-width: 48em) and (max-width: 59.9em) {
-  /* line 47, ../sass/state-change/_state-change.scss */
-  .contem {
-    width: 48em;
-  }
-}
-@media only screen and (min-width: 60em) and (max-width: 74.9em) {
-  /* line 57, ../sass/state-change/_state-change.scss */
-  .contem {
-    width: 60em;
-  }
-}
-@media only screen and (min-width: 90em) {
-  /* line 68, ../sass/state-change/_state-change.scss */
-  .contem {
-    width: 90em;
-  }
-}
+    width: 30em; } }
 @media only screen and (max-width: 59.9em) {
-  /* line 80, ../sass/state-change/_state-change.scss */
-  [role="main"], .complemento {
-    width: 100% !important;
-  }
-  /* line 82, ../sass/state-change/_state-change.scss */
-  [role="main"]:after, .complemento:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
+  [role="main"], .complemento, footer {
+    width: 100% !important; }
+    [role="main"]:after, .complemento:after, footer:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+  .conteudo p, .conteudo h1, .conteudo h2 {
+    padding-left: 1em;
+    padding-right: 1em; } }
+@media print {
+  h1 {
+    font-size: 2em !important; }
+
+  h2, h3, h3 {
+    font-size: 1.5em !important; }
+
+  hr {
+    display: none !important; } }

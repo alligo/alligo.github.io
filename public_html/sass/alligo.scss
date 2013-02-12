@@ -1,6 +1,11 @@
 @charset "UTF-8";
-/* -------------------------------------------------------------------------*/
-/* Base */
+/*
+   Alligo © 2013
+   CSS manual usando teoria SMACSS, com pré-processador SASS
+*/
+
+/* Base
+----------------------------------------------------------------------------*/
 // Grupo Base: requisitos SASS, Compass, mixins customizados e variaveis;
 
 @import "base/base"; // Importa compass e define variáveis de base genéricas
@@ -13,29 +18,29 @@
 
 @import "base/tipografia"; // Define tipografia básica. Depende de vertical-rhythm
 
-/* -------------------------------------------------------------------------*/
-/* Layout */
+/*  Layout
+----------------------------------------------------------------------------*/
 // Grupo Layout: definicoes gerais a página, mas não específico. Ex.: grid, aparencia geral de blocos
 @import "layout/grid";
 @import "layout/layout";
 
-/* -------------------------------------------------------------------------*/
-/* Módulos */
+/* Módulos
+----------------------------------------------------------------------------*/
 // Grupo Módulo: definicoes de aparencia especificas de regiões específicas. Ex. definicoes de extensoes
-@import "module/menu/menu";
+//@import "module/menu/menu";
 @import "module/module";
 
-/* -------------------------------------------------------------------------*/
-/* Estado */
+/* Estado
+----------------------------------------------------------------------------*/
 // Grupo Estado: representacao de estado. Ex. definicoes de mensagem de erro/acerto e exibir/esconder genéricas 
 @import "state/state";
 
-/* -------------------------------------------------------------------------*/
-/* Tema */
+/* Tema 
+---------------------------------------------------------------------------*/
 // Grupo Tema: sobreposicao de cores, uso de fontes e links
 @import "theme/theme";
 
-/* -------------------------------------------------------------------------*/
-/* Mudança de Estado */
+/* Mudança de Estado 
+---------------------------------------------------------------------------*/
 // Grupo Mudança de Estado: alteração de estado. Ex.: media queries(responsible), definicoes focadas para alteracao por javascript;
 @import 'state-change/state-change';

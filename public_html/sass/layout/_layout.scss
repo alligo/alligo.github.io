@@ -1,6 +1,7 @@
+@charset "UTF-8";
 // Grupo Layout: definicoes gerais a página, mas não específico. Ex.: grid, aparencia geral de blocos
 
-// Clear fix nos seguintes elementso
+//      Clear fix nos seguintes elementso
 .agrupado:after, .ultimo:after, .contem:after {
   content: "";
   display: table;
@@ -10,30 +11,138 @@
 .contem {
   //@include container;
   //@include susy-grid-background;
-  width: 75em; //1200px
+  //max-width: 45em; //1200px
+  width: 45em; //1200px
   margin: 0 auto;
 }
 
-[role="main"], .complemento {
-  float: left;
-/*  height: inherit;*/
-}
+// [role="main"], .complemento {
+//   float: left;
+//   //height: inherit;
+// }
 
 //[role="main"] é o conteúdo principal. @see WAI ARIA
-[role="main"] {
-  width: 100%;
+// [role="main"] {
+//   width: 100%;
+// }
+
+//      Padrao é colula com tres
+// .complemento.primario, .complemento.secundario {
+//   width: 20%;
+// }
+// .tresgrupos [role="main"] {
+//   width: 60%;
+// }
+// .doisgrupos [role="main"] {
+//   width: 75%;
+// }
+// .doisgrupos .complemento.primario, .doisgrupos .complemento.secundario {
+//   width: 25%;
+// }
+body {
+  background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8vLy+fn59PT09vb29/f39fX18/Pz+Pj4+6R61QAAAVBJREFUeNrslDsOXDEMAylRn/vfOONNlU518IoFHmYNmaJoybvd4ZlaV5dVuTt9xprtnVJXazt3VI6MOWNRNO2anAxncAvls85YIUSgr91I2lo+J+9YHnuypxdhzrGiM+uMMWeq09rXIUKfTe46Y9V0UG7pa/33ZFD9jFE2UenK35hqOWM0nrEKc0YrO7Ofz0FvmjPWhBloeugvU8VoBmVnLIr0/n4kjAMvZFFzxnJFFbpyFpdFQgyOM0YB8UwMIWRDzTTlt85YLfwovOALo2uJ18vZFYuSSTq8VjKql1Cl94z17AxiwaB3/3X5hBUbS2Ui/qKJNSJseHXFBAkz6pcvWqon0zh2xqSK10VvVagkoITevNgzFp1AteaOfv+Rdl7LGfOc8+V0SywormDeSPUZ61uq31L9luq3VL+l+i3Vb6l+S/Vbqt9S/T+X6h8BBgCsg0KyWmfDBAAAAABJRU5ErkJggg==') repeat top left;
+  border-top: 10px solid $padrao-cor-link ;
+  color: #666;
 }
 
-//Padrao é colula com tres
-.complemento.primario, .complemento.secundario {
-  width: 20%;
+header {
+  > h1 {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  > h2 {
+    font-size: 2.8em;
+    line-height: 1.0em;
+    //@include adjust-font-size-to($base-font-size * 2.8);
+  }
+  > p {
+    font-size: 1.375em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
 }
-.tresgrupos [role="main"] {
-  width: 60%;
+.conteudo {
+  border-bottom: #FCB325 solid .7em;
+  padding-bottom: 2em;
 }
-.doisgrupos [role="main"] {
-  width: 75%;
+article {
+   h2 {
+    font-size: 2.5em;
+    line-height: 1.0em;
+  }
+  p {
+    font-size: 1.125em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
 }
-.doisgrupos .complemento.primario, .doisgrupos .complemento.secundario {
-  width: 25%;
+
+
+
+// header {
+  
+// }
+footer {
+  background-color: #404042;
+  color: #ccc;
+  font-style: italic;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  h2 {
+    color: #FCB325;
+    margin-left: 1.5em;
+    @include adjust-font-size-to($base-font-size * 1.375);
+  }
+  p {
+  	//padding-left: 1.5em;
+    @include adjust-font-size-to($base-font-size * 1.0);
+	  text-align: center;
+  }
+
+}
+
+// .slogan {
+//   font-size: 2em;
+//   line-height: 1.2em;
+//   margin-top: 2em;
+// }
+// article {
+//   font-size: 2em;
+//   line-height: 1.2em;
+//   margin-top: 5em;
+// }
+
+
+.span4 {
+	display: block;
+	width: 33%;
+	float: left;
+}
+
+.span2 {
+	display: block;
+	width: 50%;
+	float: left;
+}
+.empresa {
+	p {
+		@extend .span4;
+	}
+
+}
+[itemprop="founder"], [itemprop="employee"] {
+	@extend .span2;
+	p {
+		margin-left: 2em;
+		text-align: left;
+	}
+}
+
+hr {
+	width: 70%;
+	height: 3px;
+	border: 0;
+	//color: $padrao-cor-link ;
+	background-color: $padrao-cor-link ;
+	margin: 3.125em auto;
 }

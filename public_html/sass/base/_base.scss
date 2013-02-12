@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // ---------------------------------------------------------------------------
 // Compass
 @import "compass";
@@ -23,6 +24,11 @@ $experimental-support-for-pie : false;
 $padrao-link-underline-usar : true; //Usar underline por padrão?
 
 // ---------------------------------------------------------------------------
+
+//$cor-texto-base      : #666;
+//$cor-texto-alt       : #fc3;
+
 // Cores
-$padrao-cor-texto: black;
-$padrao-cor-link : #058;
+$padrao-cor-texto           : #666;
+$padrao-cor-titulos         : #333;
+$padrao-cor-link            : #fc3;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // ---------------------------------------------------------------------------
 // Tipografia básica
 // Ajuda a trabalhar harmonicamente com tamanho de letras e linha
@@ -17,22 +18,27 @@ $base-line-height     : 24px;
 @include establish-baseline;
 
 // ---------------------------------------------------------------------------
+// Font-families
+$padrao-font-sans     : "Myriad Pro", "Myriad", "Myriad Web Pro", "Lucida Grande", "Droid Sans", sans-serif;
+$padrao-font-serif    : Constantia, Georgia, "Times New Roman", Times, serif;
+$padrao-font-mono     : Monaco, Menlo, Consolas, "Courier New", monospace;
+
+$padrao-font-base     : $padrao-font-serif;
+$padrao-font-alt      : $padrao-font-sans;
+
+// ---------------------------------------------------------------------------
 // Definição de demais funções de fonte
-
-// Titulos
-h1 {
-  @include adjust-font-size-to($base-font-size * 2);
+.typo-base {
+  Font-family: $padrao-font-base ;
+  font-style: italic;
 }
-h2 {
-  @include adjust-font-size-to($base-font-size * 1.5);
+.typo-alt {
+  Font-family: $padrao-font-alt;
+  font-style: italic;
 }
-h3 {
-  @include adjust-font-size-to($base-font-size * 1.3);
+.typo-mono {
+  Font-family: $padrao-font-mono;
 }
-h4, h5, h6 {
-  @include adjust-font-size-to($base-font-size * 1.1);
-}
-
 // Links
 a {
   color: $padrao-cor-link;
@@ -50,4 +56,58 @@ a {
 //Variações de texto
 strong {
   font-weight: 700;
+}
+
+// Padrão Geral
+body {
+  @extend .typo-base;
+}
+
+// Titulos
+h1, h2 {
+  color: $padrao-cor-titulos;
+  @extend .typo-alt;
+  //@include adjust-font-size-to($base-font-size * 2);
+}
+// h2 {
+//   color: $padrao-cor-titulos;
+//   @extend .typo-alt;
+//   @include adjust-font-size-to($base-font-size * 1.8);
+// }
+h3 {
+  color: $padrao-cor-titulos;
+  @extend .typo-alt;
+  //@include adjust-font-size-to($base-font-size * 1.3);
+}
+// h4, h5, h6 {
+//   @extend .typo-alt;
+//   @include adjust-font-size-to($base-font-size * 1.1);
+// }
+
+.slogan {
+  //font-size: 2.5em;
+  //line-height: 1em;
+}
+
+[role="main"] > h1 {
+  margin: 1.5em auto;
+}
+//p {
+  //@include adjust-font-size-to($base-font-size * 1.2);
+//}
+// header p, article p {
+//   font-size: 1.4em;
+// }
+footer h2 {
+  @extend .typo-base;
+  font-size: 1.7dem;
+  font-weight: 700;
+}
+footer {
+  a, a:hover, a:link {
+    color: #ccc;
+  }
+  a:hover {
+    text-decoration: none;
+  }
 }

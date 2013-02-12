@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // Grupo Mudança de Estado: alteração de estado. Ex.: media queries(responsible), definicoes focadas para alteracao por javascript;
 
 // Tabela de equivalencia 1em = 16px
@@ -29,6 +30,15 @@
     width: 100%;
   } 
 }
+// 600px
+@media only screen and (max-width: 37.5em) {
+  [itemprop="founder"], [itemprop="employee"], .span4, .empresa p {
+    width: 100%;
+  }
+  [itemprop="founder"] > p, [itemprop="employee"] > p {
+    text-align: center;
+  }
+}
 
 // PEQUENO: Igual ou maior que 480px e menor que 768px
 // Mobile retrato & paisagem, Tablet retrado
@@ -43,32 +53,32 @@
 // MEDIO: Igual ou maior que 768px e menor que 960px
 // Ex.:Tablet retrato (768), iPhone paisagem (960)
 //@media screen and (min-width: 768px) and (max-width: 959px) {
-@media only screen and (min-width: 48em) and (max-width: 59.9em) {
-  .contem {
-    width: 48em; //768
-  }
-}
+// @media only screen and (min-width: 48em) and (max-width: 59.9em) {
+//   .contem {
+//     width: 48em; //768
+//   }
+// }
 
 // GRANDE: Igual ou maior que 960 e menor que 1200
 // Ex. Tablet paisagem (1024), 
 //Tablet retrato: de 768px até menor que 960px
 //@media screen and (min-width: 960px) and (max-width: 1199px) {
-@media only screen and (min-width: 60em) and (max-width: 74.9em) {
-  .contem {
-    width: 60em; //960
-  }
-}
+// @media only screen and (min-width: 60em) and (max-width: 74.9em) {
+//   .contem {
+//     width: 60em; //960
+//   }
+// }
 
 //PADRÂO
 //A resolu
 
 //ENORME: igual ou maior que 1440 
 //@media screen and (min-width: 1440px) {
-@media only screen and (min-width: 90em) {
-  .contem {
-    width: 90em; //1440
-  }
-}
+// @media only screen and (min-width: 90em) {
+//   .contem {
+//     width: 90em; //1440
+//   }
+//}
 
 // ---------------------------------------------------------------------------
 // COMBOS
@@ -77,12 +87,27 @@
 //MINUSCULO, PEQUENO e MEDIO
 //@media screen and (max-width: 959px) {
 @media only screen and (max-width: 59.9em) {
-  [role="main"], .complemento {
+  [role="main"], .complemento, footer {
     width: 100% !important;//Sim, esse important é necessario
     &:after {
       content: "";
       display: table;
       clear: both;
     }
+  }
+  .conteudo p, .conteudo h1, .conteudo h2 {
+      padding-left: 1em;
+      padding-right: 1em;
+  }
+}
+@media print {
+  h1 {
+    font-size: 2em !important;
+  }
+  h2, h3, h3 {
+    font-size: 1.5em !important;
+  }
+  hr {
+    display: none !important;
   }
 }
