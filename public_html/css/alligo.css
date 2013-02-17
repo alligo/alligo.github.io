@@ -141,19 +141,19 @@ footer {
   background-color: #404042;
   color: #ccc;
   font-style: italic;
-  padding-bottom: 2em;
-  margin-top: 2em; }
+  padding-bottom: 2.5em;
+  margin-top: 2em;
+  padding-top: 2em; }
   footer h2 {
     color: #FCB325;
-    margin-left: 1.5em;
+    margin-left: 2em;
     font-size: 1.375em;
     line-height: 3em; }
   footer p {
     font-size: 1em;
-    line-height: 1.5em;
-    text-align: center; }
+    line-height: 1.5em; }
 
-.span4, .empresa p {
+.span4, .empresa > div {
   display: block;
   width: 33%;
   float: left; }
@@ -163,8 +163,14 @@ footer {
   width: 50%;
   float: left; }
 
+.empresa {
+  padding-bottom: 4em; }
+  .empresa p {
+    margin-left: 3em;
+    text-align: left; }
+
 [itemprop="founder"] p, [itemprop="employee"] p {
-  margin-left: 2em;
+  margin-left: 3em;
   text-align: left; }
 
 hr {
@@ -210,11 +216,8 @@ hr {
   .contem {
     width: 100%; } }
 @media only screen and (max-width: 37.5em) {
-  [itemprop="founder"], [itemprop="employee"], .span4, .empresa p, .empresa p {
-    width: 100%; }
-
-  [itemprop="founder"] > p, [itemprop="employee"] > p {
-    text-align: center; } }
+  [itemprop="founder"], [itemprop="employee"], .span4, .empresa > div, .empresa > div {
+    width: 100%; } }
 /*@media screen and (min-width: 480px) and (max-width: 767px) {*/
 @media only screen and (min-width: 30em) and (max-width: 47.9em) {
   .contem {
@@ -229,7 +232,10 @@ hr {
 
   .conteudo p, .conteudo h1, .conteudo h2 {
     padding-left: 1em;
-    padding-right: 1em; } }
+    padding-right: 1em; }
+
+  footer p {
+    text-align: left; } }
 @media print {
   h1 {
     font-size: 2em !important; }
